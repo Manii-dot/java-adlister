@@ -9,16 +9,16 @@ import java.io.IOException;
 public class GameServlet extends HttpServlet{
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
-        request.getRequestDispatcher("/guess.jsp").forward(request, response);
+        request.getRequestDispatcher("Guessing-Game/guess.jsp").forward(request, response);
     }
 
     protected void doPost(HttpServletRequest request, HttpServletResponse response)throws IOException, ServletException{
         int aiNumber = 1 + (int)(3 * Math.random());
-        String userGuess = request.getParameter("guess");
+        String userGuess = request.getParameter("quantity");
         if(Integer.parseInt(userGuess) == aiNumber){
-            response.sendRedirect("/Correct");
+            response.sendRedirect("/CorrectServlet");
         }else{
-            response.sendRedirect("/incorrect");
+            response.sendRedirect("/incorrectServlet");
         }
     }
 }

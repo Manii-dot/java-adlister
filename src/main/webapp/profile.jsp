@@ -10,16 +10,18 @@
 <html>
 <head>
     <title>Profile</title>
+    <%@ include file="partials/head.jsp" %>
 </head>
 <body>
+<%@ include file="partials/navbar.jsp" %>
 
 <h1>Welcome to your profile</h1>
 <h2>Web Site Main Ingredients:</h2>
 
-<p>Your name</p>
+<p>Your name is Admin?</p>
 <p>Love is the best</p>
 <p>Marco is the best</p>
-<p>Lets mnake this happen in the world</p>
+<p>Lets get it started in here!</p>
 
 </body>
 </html>

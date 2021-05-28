@@ -10,9 +10,10 @@
 <html>
 <head>
     <title>Login</title>
-    <link rel="stylesheet" href="css/styles.css">
+    <%@ include file="partials/head.jsp" %>
 </head>
 <body>
+
 <form action="/login.jsp" method="post">
 <div>
     <label for="username">Username:</label>
@@ -27,8 +28,7 @@
 
 <input type="submit" value="Log in">
 </form>
-<p>"username" is: ${param.username}</p>
-<p>"password" is: ${param.password}</p>
+
 <c:choose>
     <c:when test="${param.username.equals('admin') && param.password.equals('password')}">
         <p>Cool bean!</p>
